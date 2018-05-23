@@ -1,3 +1,31 @@
 body {
     text-align: center;
 }
+
+.modal {
+    font-family: 'Kalam', cursive;
+}
+
+.modal-header, .modal-footer {
+    border: none;
+}
+
+.modal-footer {
+    text-align: center;
+}
+
+.star1{
+   transform: matrix(1, -0.3, 0, 1, 6, 19);
+}
+
+.star2{
+    transform: matrix(1, -0.3, 0, 1, -1, -4);
+}
+
+.star3{
+    transform: matrix(1, -0.3, 0, 1, -1, -4);
+}
+
+.star4{
+    transform: matrix(1, -0.3, 0, 1, -12, 14);
+}

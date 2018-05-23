@@ -32,6 +32,7 @@ var Engine = (function(global) {
      * and handles properly calling the update and render methods.
      */
     function main() {
+    
         /* Get our time delta information which is required if your game
          * requires smooth animation. Because everyone's computer processes
          * instructions at different speeds we need a constant value that
@@ -79,7 +80,40 @@ var Engine = (function(global) {
      */
     function update(dt) {
         updateEntities(dt);
-        // checkCollisions();
+
+        // var el = document.getElementById("closeModal");
+        // el.addEventListener("click", closeMod);
+
+        checkCollisions();
+    }
+
+   
+
+    function checkCollisions() {
+        let playerX = player.x;
+        let playerY = player.y;
+        
+        allEnemies.forEach(function(enemy) {
+            var distance = getDistance(player.x, player.y, enemy.x, enemy.y);
+            if(player.x >= enemy.x - 40 && player.x <= enemy.x + 40){
+                if(player.y >= enemy.y - 40 && player.y <= enemy.y + 40){
+                    reset();
+                }
+            } 
+
+            if(playerY === 0){
+                jQuery('#winModal').modal('show'); 
+                reset();
+            }
+       
+        });
+        
+    }
+
+    function getDistance(x1,y1,x2,y2){
+        let xDistance = x2 - x1;
+        let yDistance = y2 - y1;
+        return Math.sqrt(Math.pow(xDistance,2) + Math.pow(yDistance,2));
     }
 
     /* This is called by the update function and loops through all of the
@@ -160,8 +194,14 @@ var Engine = (function(global) {
      * handle game reset states - maybe a new game menu or a game over screen
      * those sorts of things. It's only called once by the init() method.
      */
-    function reset() {
-        // noop
+    function reset() { 
+        
+            player.x = 200;
+            player.y = 400;
+            allEnemies[0].x = 0;
+            allEnemies[1].x = 200;
+            allEnemies[2].x = 0;
+        
     }
 
     /* Go ahead and load all of the images we know we're going to need to
