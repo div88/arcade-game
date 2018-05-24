@@ -4,13 +4,8 @@ Arcade game where there is a player and enemies. Once the player collides with e
 
 ## Table of Contents
 
-* [Project Walkthrough](#project-walkthrough)
 * [Instructions](#instructions)
 * [Contributing](#contributing)
-
-## Walkthrough
-
-<img src="https://github.com/div88/memory-game/blob/master/memoryGame.gif" alt="memoryGame walkthrough" />
 
 ## Instructions
 
