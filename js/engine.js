@@ -80,10 +80,6 @@ var Engine = (function(global) {
      */
     function update(dt) {
         updateEntities(dt);
-
-        // var el = document.getElementById("closeModal");
-        // el.addEventListener("click", closeMod);
-
         checkCollisions();
     }
 
@@ -94,7 +90,7 @@ var Engine = (function(global) {
         let playerY = player.y;
         
         allEnemies.forEach(function(enemy) {
-            var distance = getDistance(player.x, player.y, enemy.x, enemy.y);
+            //var distance = getDistance(player.x, player.y, enemy.x, enemy.y);
             if(player.x >= enemy.x - 40 && player.x <= enemy.x + 40){
                 if(player.y >= enemy.y - 40 && player.y <= enemy.y + 40){
                     reset();
@@ -110,11 +106,11 @@ var Engine = (function(global) {
         
     }
 
-    function getDistance(x1,y1,x2,y2){
-        let xDistance = x2 - x1;
-        let yDistance = y2 - y1;
-        return Math.sqrt(Math.pow(xDistance,2) + Math.pow(yDistance,2));
-    }
+    // function getDistance(x1,y1,x2,y2){
+    //     let xDistance = x2 - x1;
+    //     let yDistance = y2 - y1;
+    //     return Math.sqrt(Math.pow(xDistance,2) + Math.pow(yDistance,2));
+    // }
 
     /* This is called by the update function and loops through all of the
      * objects within your allEnemies array as defined in app.js and calls

@@ -57,19 +57,20 @@ Player.prototype.render = function() {
    ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 
+//Keeps the player inside the canvas
 Player.prototype.handleInput = function(keyPressed) {
     
-    if(this.x >= 500){
-        this.x = -50;
+    if(this.x >= 410){
+        this.x = 200;
     }
 
     if(this.x <= -10){
-        this.x = 0;
+        this.x = 200;
         //470
     }
 
-    if(this.y >= 500){
-        this.y = -50;
+    if(this.y >= 440){
+        this.y = 370;
     }
 
     if(this.y <= 0){
