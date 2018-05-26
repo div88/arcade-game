@@ -43,15 +43,15 @@ var Player = function(x,y,speed) {
     this.height = 171;
     this.initialLocation = (this.x, this.y);
     this.speed = speed;
-}
+};
 
 Player.prototype.update = function() {
     
-}
+};
 
 Player.prototype.win = function() {
     console.log("You Won!!!!");
-}
+};
 
 Player.prototype.render = function() {
    ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
@@ -102,7 +102,7 @@ Player.prototype.onWin = function(){
         console.log('close');
         jQuery('#winModal').modal('hide'); 
         reset();
-}
+};
 
 
 // Now instantiate your objects.
