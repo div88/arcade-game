@@ -17,6 +17,7 @@ Player position is reset if
     - player collides with enemy
     - player tries to move off canvas horizontally or vertically
     - player wins by reaching the water tiles
+Multiple enemies keep coming at a random speed
 Once player reaches water(blue) tiles, a win message is shown in pop up 
 
 ## Instructions
