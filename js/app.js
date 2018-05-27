@@ -100,23 +100,16 @@ Player.prototype.handleInput = function(keyPressed) {
     }
 };
 
-Player.prototype.onWin = function(){
-        console.log('close');
-        // jQuery('#winModal').modal('hide'); 
-     
-        reset();
-};
-
-
 // Now instantiate your objects.
-// Place all enemy objects in an array called allEnemies
-// Place the player object in a variable called player
 
+// Place all enemy objects in an array called allEnemies
 var enemy1 = new Enemy(0,230);
 var enemy2 = new Enemy(200,145);
 var enemy3 = new Enemy(0,60);
 
 var allEnemies = [enemy1, enemy2, enemy3];
+
+// Place the player object in a variable called player
 var player = new Player(200,400,100);
 
 // This listens for key presses and sends the keys to your

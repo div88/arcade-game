@@ -6,6 +6,18 @@ Arcade game where there is a player and enemies. Once the player collides with e
 
 * [Instructions](#instructions)
 * [Contributing](#contributing)
+* [Instructions to play](#instructionsToPlay)
+
+## Instructions to play
+
+Clone or download the game [here](https://github.com/div88/arcade-game.git)
+Open index.html in your favorite browser
+You can use arrow keys to move player
+Player position is reset if
+    - player collides with enemy
+    - player tries to move off canvas horizontally or vertically
+    - player wins by reaching the water tiles
+Once player reaches water(blue) tiles, a win message is shown in pop up 
 
 ## Instructions
 

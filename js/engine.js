@@ -91,13 +91,15 @@ var Engine = (function(global) {
         let playerY = player.y;
         
         allEnemies.forEach(function(enemy) {
-            //var distance = getDistance(player.x, player.y, enemy.x, enemy.y);
+            //Tracking player and enemy collision
             if(player.x >= enemy.x - 40 && player.x <= enemy.x + 40){
                 if(player.y >= enemy.y - 40 && player.y <= enemy.y + 40){
                     reset();
                 }
             } 
 
+
+            //Detects if player reached water, hence shows alert and also resets
             if(playerY === 0){
                 swal({
                     title: "Congratulations,You won!"
