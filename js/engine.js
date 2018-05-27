@@ -67,6 +67,7 @@ var Engine = (function(global) {
         reset();
         lastTime = Date.now();
         main();
+        
     }
 
     /* This function is called by main (our game loop) and itself calls all
@@ -98,7 +99,9 @@ var Engine = (function(global) {
             } 
 
             if(playerY === 0){
-                jQuery('#winModal').modal('show'); 
+                swal({
+                    title: "Congratulations,You won!"
+                  });
                 reset();
             }
        

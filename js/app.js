@@ -102,7 +102,8 @@ Player.prototype.handleInput = function(keyPressed) {
 
 Player.prototype.onWin = function(){
         console.log('close');
-        jQuery('#winModal').modal('hide'); 
+        // jQuery('#winModal').modal('hide'); 
+     
         reset();
 };
 
