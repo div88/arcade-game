@@ -47,23 +47,14 @@ Enemy.prototype.render = function() {
 };
 
 
-
-Player.prototype.win = function() {
-    console.log("You Won!!!!");
-};
-
 Player.prototype.render = function() {
    ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 
+//Updates the player position and keeps player inside canvas on reaching canvas boundary
 Player.prototype.update = function() {
- };
-
-//Keeps the player inside the canvas
-Player.prototype.handleInput = function(keyPressed) {
-    
-    //Gets back player to center, if it reaches right end of canvas
-    if(this.x >= 410){
+     //Gets back player to center, if it reaches right end of canvas
+     if(this.x >= 410){
         this.x = 200;
     }
 
@@ -83,20 +74,23 @@ Player.prototype.handleInput = function(keyPressed) {
         this.y = 0;
         //400
     }
+};
 
-   
-    if(keyPressed == "up" || keyPressed == "down"){
-            if(keyPressed == "up"){
-                this.y = this.y - 10;
-            } else if(keyPressed == "down"){
-                this.y = this.y + 10;
-            }
-    } else if(keyPressed == "left" || keyPressed == "right"){
-        if(keyPressed == "right"){
-            this.x = this.x + 10;
-        } else if(keyPressed == "left" && this.x <= 420){
-            this.x = this.x - 10;
-        }
+//Updates player move based on the key pressed
+Player.prototype.handleInput = function(keyPressed) {
+    switch (keyPressed) {
+        case 'left':
+            this.x -= 10;
+            break;
+        case 'up':
+            this.y -= 10;
+            break;
+        case 'right':
+            this.x += 10;
+            break;
+        case 'down':
+            this.y += 10;
+            break;
     }
 };
 
